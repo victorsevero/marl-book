@@ -21,8 +21,8 @@ class MarsRover(gym.Env):
         self.T = self.get_transition_matrix()
         self.rewards = self.get_rewards_matrix()
 
-    def reset(self):
-        super().reset()
+    def reset(self, seed=None):
+        super().reset(seed=seed)
         self.state = 0
         return self.state, {}
 
